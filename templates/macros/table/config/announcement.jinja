@@ -1,0 +1,13 @@
+{%- import "macros/svgs.jinja" as svg -%}
+
+{%- set show_announcement = true %}
+{%- macro announcement() %}
+<div class="alert bg-info alert-dismissible fade show" style="color: #023d6b;" role="alert">
+  <h4 class="alert-heading">       
+    {{ svg.announcement_svg | safe }}
+    <span class="align-middle">Example announcenment</span>
+  </h4>
+  Test Message
+  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+{%- endmacro %}
